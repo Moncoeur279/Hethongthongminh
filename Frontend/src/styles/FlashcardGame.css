@@ -1,0 +1,54 @@
+.flashcard-game {
+  text-align: center;
+}
+
+.flashcards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.flashcard {
+  width: 120px;
+  height: 120px;
+  background-color: #2d3748; /* Màu nền khi chưa lật */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.flashcard.flipped {
+  background-color: #48bb78; /* Màu nền khi thẻ bị lật */
+}
+
+.flashcard p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+}
+
+.restart-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #1e40af;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.restart-button:hover {
+  background-color: #3b82f6;
+}
