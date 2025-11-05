@@ -1,0 +1,164 @@
+.chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, #64748b 0%, #3b82f6 50%, #64748b 100%);
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* LEFT: avatar + title */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.ai-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #3b82f6, #1e40af);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-info {
+  flex: 1;
+}
+
+.header-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.header-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+}
+
+.status-badge {
+  padding: 0.125rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.status-badge.online {
+  background: #10b981;
+  color: white;
+}
+
+.status-badge.offline {
+  background: #6b7280;
+  color: white;
+}
+
+.header-subtitle {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+/* RIGHT: action pills */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* ======= PILL BUTTON (dùng chung cho Dictionary / Login / Register) ======= */
+.action-button {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.action-button:hover {
+  background: rgba(17, 24, 39, 0.45);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.action-button:active {
+  transform: translateY(1px);
+}
+
+.dictionary-btn {
+  background: linear-gradient(45deg, #64748b, #475569);
+  color: white;
+}
+
+.dictionary-btn:hover {
+  background: linear-gradient(45deg, #475569, #334155);
+  transform: translateY(-1px);
+}
+
+.dictionary-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .chat-header {
+    padding: 0.75rem 1rem;
+  }
+
+  .header-left {
+    gap: 0.5rem;
+  }
+
+  .ai-avatar {
+    width: 36px;
+    height: 36px;
+    font-size: 0.8125rem;
+  }
+
+  .header-title {
+    font-size: 0.9375rem;
+  }
+
+  .header-actions {
+    gap: 0.5rem;
+  }
+
+  .action-button {
+    height: 34px;
+    padding: 0 12px;
+    font-size: 0.8125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .chat-header {
+    padding: 0.625rem 0.75rem;
+  }
+
+  /* Ẩn chữ trên màn nhỏ, chỉ giữ icon */
+  .action-button span.text {
+    display: none;
+  }
+
+  .action-button {
+    padding: 0 10px;
+    min-width: auto;
+  }
+}

@@ -1,0 +1,150 @@
+.message {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  max-width: 100%;
+}
+
+.user-message {
+  flex-direction: row-reverse;
+}
+
+.message-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.user-message .message-avatar {
+  background: linear-gradient(45deg, #3b82f6, #64748b);
+}
+
+.ai-message .message-avatar {
+  background: linear-gradient(45deg, #6b7280, #64748b);
+}
+
+.message-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  max-width: 80%;
+  min-width: 0;
+}
+
+.user-message .message-content {
+  align-items: flex-end;
+}
+
+.ai-message .message-content {
+  align-items: flex-start;
+}
+
+.message-bubble {
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  word-wrap: break-word;
+  hyphens: auto;
+  line-height: 1.5;
+  font-size: 0.9375rem;
+}
+
+.user-message .message-bubble {
+  background: linear-gradient(45deg, #3b82f6, #64748b);
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.ai-message .message-bubble {
+  background: linear-gradient(45deg, #6b7280, #64748b);
+  color: white;
+  border-bottom-left-radius: 4px;
+}
+
+.message-timestamp {
+  font-size: 0.75rem;
+  color: #6b7280;
+  padding: 0 0.25rem;
+  white-space: nowrap;
+}
+
+.messages-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.word-error {
+  text-decoration: underline wavy red;
+  cursor: pointer;
+}
+
+.word-error:hover {
+  background: rgba(255, 0, 0, 0.08);
+}
+
+.word-fixed {
+  text-decoration: underline wavy #2563eb;
+  cursor: pointer;
+}
+
+.word-fixed:hover {
+  background: rgba(37, 99, 235, 0.08);
+}
+
+.grammar-popover {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 260px;
+  z-index: 2000;
+  animation: fadeIn 0.2s ease;
+}
+
+.popover-header {
+  font-weight: 600;
+  color: #1d4ed8;
+  margin-bottom: 4px;
+}
+
+.popover-body {
+  font-size: 13px;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+.popover-suggest {
+  font-size: 13px;
+  color: #2563eb;
+  margin-bottom: 8px;
+}
+
+.applied-tag {
+  font-size: 13px;
+  color: #16a34a;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.grammar-popover button {
+  margin-right: 6px;
+  padding: 4px 10px;
+  background: #2563eb;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.grammar-popover button:hover {
+  background: #1d4ed8;
+}
